@@ -29,6 +29,22 @@ function findLongestWord(palabras) {
 
 findLongestWord(words);
 
+// const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+// function findLongestWord (words) {
+//    let longestWord = "";
+//    let palabritas = words;
+//   if (palabritas.length === 0) {
+//     return null;
+//   }
+//    for (let i=0;i < palabritas.length;i++) {
+//     if (palabritas[i].length > longestWord) {
+//       longestWord = palabritas[i].length;
+//     }
+//  }
+//    return longestWord && console.log(longestWord);
+// }
+// findLongestWord();
+
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
