@@ -1,60 +1,40 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers(a, b) {
-  if (a > b) {
-    return a;
-  } else {
-    return b;
+function maxOfTwoNumbers(num1, num2) {
+  if (num1 > num2) {
+    return num1;
+  }
+  if (num2 > num1) {
+    return num2;
+  }
+  else {
+    return num1 && num2;
   }
 }
-
-
 
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
-
-function findLongestWord(palabras) { 
-  if (palabras.length === 0) {
+function findLongestWord(words) {
+  if (words.length === 0) {
     return null;
   }
-  
-  let longestWord = "";
-  for (let index = 0; index < palabras.length; index++) {
-    const element = palabras[index];
-    if (words.length > longestWord.length) {
-      longestWord = word;
+  let longest = "";
+  for (let i = 0; i < words.length; i++) {
+    const run = words[i]; 
+    if (run.length > longest.length) {
+      longest = run;
     }
   }
-  return longestWord;
+  return longest;
 }
-
-findLongestWord(words);
-
-// const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
-// function findLongestWord (words) {
-//    let longestWord = "";
-//    let palabritas = words;
-//   if (palabritas.length === 0) {
-//     return null;
-//   }
-//    for (let i=0;i < palabritas.length;i++) {
-//     if (palabritas[i].length > longestWord) {
-//       longestWord = palabritas[i].length;
-//     }
-//  }
-//    return longestWord && console.log(longestWord);
-// }
-// findLongestWord();
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
-
-
-function sumNumbers(numeros) { 
-  let resultNumbers = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    resultNumbers += numbers[i];
-    } 
-    return resultNumbers;
+function sumNumbers(numArray) {
+  let totalSum = 0;
+  for (let i = 0; i < numArray.length; i++) {
+    totalSum = totalSum + numArray[i];
+  }
+  return totalSum;
 }
 
 
