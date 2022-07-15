@@ -115,8 +115,12 @@ const wordsUnique = [
 ];
 
 function uniquifyArray(array) {
+  let arrayFiltered = wordsUnique.filter((item,index)=>{
+    return wordsUnique.indexOf(item) === index})
   if (array.length === 0) {
     return null;
+  } else { 
+    return array;
   }
 }
 
