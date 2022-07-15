@@ -115,23 +115,33 @@ const wordsUnique = [
 ];
 
 function uniquifyArray(array) {
-  let arrayFiltered = wordsUnique.filter((item,index)=>{
-    return wordsUnique.indexOf(item) === index})
+  const uniqueArray = [];
   if (array.length === 0) {
     return null;
-  } else { 
-    return array;
   }
+  for (let i = 0; i < array.length; i++) {
+    let word = array[i];
+    if (uniqueArray.indexOf(word) < 0) {
+      uniqueArray.push(word);
+    }
+  }
+  return uniqueArray;
 }
-
-
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() { }
-
-
+function doesWordExist(array, word) {
+   if (array.length === 0) {
+    return null;
+   }
+   for (let i = 0; i < array.length; i++) {
+    if (array[i] === word) {
+      return true;
+    }
+  }
+  return false;
+}
 
 // Iteration #7: Count repetition
 const wordsCount = [
@@ -148,9 +158,18 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() { }
-
-
+function howManyTimes(array, word) { 
+  if (array.length === 0) {
+    return 0;
+   }
+   let count = 0;
+   for (let i = 0; i < array.length; i++) {
+    if (array[i] === word ) {
+      count++;
+    }
+  }
+  return count;
+}
 
 // Iteration #8: Bonus
 const matrix = [
@@ -176,10 +195,16 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() { }
-
-
-
+function greatestProduct(matrix) {
+  const longestProduct = [0, 0, 0, 0]; 
+  for (let i=0; i < matrix.length; i++) {
+    const inARow = matrix[i]; 
+    if (inARow > longestProduct) {
+      longestProduct = inARow;
+    }
+  }
+  return longestProduct;
+}
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
