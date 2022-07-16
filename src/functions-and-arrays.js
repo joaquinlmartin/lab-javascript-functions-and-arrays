@@ -196,14 +196,15 @@ const matrix = [
 ];
 
 function greatestProduct(matrix) {
-  const longestProduct = [0, 0, 0, 0]; 
-  for (let i=0; i < matrix.length; i++) {
-    const inARow = matrix[i]; 
-    if (inARow > longestProduct) {
-      longestProduct = inARow;
-    }
-  }
-  return longestProduct;
+  let maxProduct = 0;
+  let product = 0;
+  for (i = 0; i < matrix.length; i++) {
+    for (j = 0; j < matrix[i].length - 3; j++) {
+      product = matrix[j][i] * matrix[j][i + 1] * matrix[j][i + 2] * matrix[j][i + 3];
+      if (product > maxProduct) {
+        maxProduct = product;
+      }}}
+  return maxProduct;
 }
 
 // The following is required to make unit tests work.
